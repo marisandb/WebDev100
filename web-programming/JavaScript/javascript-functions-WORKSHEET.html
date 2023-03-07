@@ -156,12 +156,13 @@ function convertKilometersToMiles(km)
             Finally, console log the variable distanceInKilometers.
             */
             // The distance in kilometers is calculated by multiplying the distance in miles by 1.609344.
-            function convertMilesToKilometers (miles) {
-                var distanceInKilometers = miles * 1.609344
-                console.log(distanceInKilometers)
-                return distanceInKilometers
+           function convertMilesToKilometers (miles) {
+                var kilometers = miles * 1.609344
+                
+                return kilometers
             }
-            convertMilesToKilometers(10)
+            var distanceInKilometers = convertMilesToKilometers(10)
+            console.log(distanceInKilometers)
 
            </script>
         </main>
