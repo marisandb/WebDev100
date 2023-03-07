@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>WORKSHEET - Functions</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link REL=StyleSheet HREF="../styles/prism.css" TYPE="text/css">
+        <link REL=StyleSheet HREF="../styles/main.css" TYPE="text/css">
+        <script src="../js/main.js"></script>
+        <script src="../js/prism.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>JavaScript Functions Worksheet</h1>
+
+            <b>Question 1</b>
+            <p class="question">
+                What is a function, and why would you ever want to use one in your code?
+            </p>
+            <div class="answer">
+                A function is a reusable group of commands. They are beneficial to avoid repeating yourself. 
+            </div>
+
+            <b>Question 2</b>
+            <p class="question">
+                What do you call the 'inputs' that get passed into a function?
+            </p>
+            <div class="answer">
+                Parameters
+            </div>
+
+            <b>Question 3</b>
+            <p class="question">
+                Do all functions have return values?
+            </p>
+            <div class="answer">
+                No
+            </div>
+
+            <b>Question 4</b>
+            <p class="question">
+                What is the 'body' of a function, and what are the characters that enclose the body of a function?
+            </p>
+            <div class="answer">
+                The code that goes between the curly brackets. 
+            </div>
+
+            <b>Question 5</b>
+            <p class="question">
+                What does it mean to 'call', or 'invoke' a function (note that 'calling' and 'invoking' a function mean the same thing)?
+            </p>
+            <div class="answer">
+                This is what runs the code inside of a function. 
+            </div>
+
+            <b>Question 6</b>
+            <p class="question">
+                If a function has more than one parameter, what character do you use to separate those parameters?
+            </p>
+            <div class="answer">
+                A comma
+            </div>
+
+            <b>Question 7</b>
+            <p class="question">
+                What is the problem with this code (explain the syntax error)?
+                <pre><b>
+function convertKilometersToMiles(km)
+    return km * 0.6217;
+}
+                </b></pre>
+            </p>
+            <div class="answer">
+                It is missing an opening curly bracket after the paramter. 
+            </div>
+
+            <h1>Coding Problems</h1>
+            <h3>Coding Problems - See the 'script' tag below this h3 tag. You will have to write some JavaScript code in it.</h3>
+            <p>
+                <b>Always test your work! Check the console log to make sure there are no errors.</b>
+            </p>
+            <script>
+            /////////////////////
+            // CODING PROBLEMS
+            /////////////////////
+
+            console.log("Problem 1");
+            /*
+            // Problem 1 - A simple function
+            Declare a function named sayHello.
+            In the body of the function, write code that console logs "Hello!"
+
+            After you declare the function, invoke it (in other words, 'call' the function).
+            */
+            function sayHello() {
+                console.log("Hello!")
+            }
+            sayHello()
+            console.log("Problem 2");
+            /*
+            // Problem 2 - A function that takes a parameter
+            Declare a function named greetUser.
+            The function should have one parameter called userName.
+            In the body of the function, write a line of code that console logs
+            a message that says "Greetings" followed by the userName (use string concatenation).
+            For example, if the userName parameter stores a value of "Bob",
+            then the message in the console log should say "Greetings Bob".
+
+            Invoke (call) the function after the declaration 
+            MAKE SURE TO PASS IN A PARAMETER WHEN YOU INVOKE THE FUNCTION.
+            */
+            function greetUser(userName) {
+                console.log("Greetings " + userName)
+            }
+            greetUser('Human')
+
+            console.log("Problem 3");
+            /*
+           // Problem 3 - A function that has a return value
+           Declare a function called addNumbers.
+           It should have two parameters, called number1 and number2.
+           In the body of the function, declare a variable named sum
+           and initialize it assigning it an expression that adds the two parameters.
+           Then return the variable (sum).
+
+           After the declaration, invoke the function and assign the
+           return value to a variable called 'total'.
+           Then log the total.
+           For example:
+               var total = addNumbers(3,5);
+               console.log(total);
+            */
+            function addNumbers(number1, number2) {
+                var sum = number1+number2
+                return sum
+            }
+            var total = addNumbers(3,5)
+            console.log(total)
+
+                        
+
+            console.log("Problem 4");
+            /*
+            // Problem 4:
+            Define a function called convertMilesToKilometers.
+            The function should have one parameter named 'miles'.
+            In the body of the function write code that will convert the miles
+            to kilometers.
+            Make sure that the function returns the kilometers.
+            After the function definition, test the function by invoking it
+            and passing in 10 as the parameter.
+            Assign the return value to a variable named 'distanceInKilometers'
+            Finally, console log the variable distanceInKilometers.
+            */
+            // The distance in kilometers is calculated by multiplying the distance in miles by 1.609344.
+            function convertMilesToKilometers (miles) {
+                var distanceInKilometers = miles * 1.609344
+                console.log(distanceInKilometers)
+                return distanceInKilometers
+            }
+            convertMilesToKilometers(10)
+
+           </script>
+        </main>
+        <footer>
+            &copy; 2023 Niall Kader
+       </footer>
+    </body>
+</html>
