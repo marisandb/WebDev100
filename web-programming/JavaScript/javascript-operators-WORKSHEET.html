@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WORKSHEET - Operators</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link REL=StyleSheet HREF="../styles/prism.css" TYPE="text/css">
+    <link REL=StyleSheet HREF="../styles/main.css" TYPE="text/css">
+</head>
+<body>
+
+<main>
+
+<h1>Operators Worksheet</h1>
+<p>Checkout <a href="https://www.remwebdevelopment.com/blog/javascript/javascript-operators.html" target="_blank">this page</a> to review the concepts we covered in class regarding operators.</p>
+<h4>Question 1</h4>
+<p class="question">
+    What are the comparison operators used for?
+</p>
+<div class="answer">
+    They can be used for boolean expressions. 
+</div>
+<h4>Question 2</h4>
+<p class="question">
+    Explain the difference between the logical AND operator (<b>&&</b>) and the logical OR operator (<b>||</b>).
+</p>
+<div class="answer">
+    The AND operator evaluates if two boolean expressions are both true while the OR operator evaluates two boolean expressions to see if one or the other is true. 
+</div>
+<h4>Question 3</h4>
+<p class="question">
+    Which operator would you use to find the remainder from dividing 2 numbers.
+</p>
+<div class="answer">
+    The modulus operator "%"
+</div>
+<h4>Question 4</h4>
+<p class="question">
+    Which operator would you use if you wanted to find out if two values were NOT equal?
+</p>
+<div class="answer">
+    The inequality operator "!="
+</div>
+
+<h3>Coding Problems - See the 'script' tag below this h3 tag. You will have to write some JavaScript code in it.</h3>
+<p>
+    <b>Always test your work! Check the console log to make sure there are no errors.</b>
+</p>
+<script>
+/////////////////////
+// CODING PROBLEMS
+/////////////////////
+
+//Problem 1
+console.log("Problem 1");
+//Declare a variable named 'score' and assign it a value of 21.
+//Then use a short-cut arithmetic operator to add 7 to it.
+var score = 21
+score+=7
+console.log(score)
+
+//Problem 2
+console.log("Problem 2");
+//Use the decrement operator to reduce the value of 'score' by 1.
+score--
+console.log(score)
+
+
+//Problem 3
+console.log("Problem 3");
+//Declare a variable named 'todaysHighScore' and initialize it to a value of 20.
+//Then write an IF statement that checks to see if score is greater than todaysHighScore
+//If it's true then alert("You beat the high score for the day!")
+todaysHighScore = 20
+if(score>todaysHighScore){
+    alert("You beat the high score for the day!")
+}
+console.log('This problem generates an alert!')
+
+
+//Problem 4
+console.log("Problem 4");
+//Use your imagination to declare and initialize a few variables and then demonstrate the logical AND operator in an IF statement
+let weather = "Sunny"
+let temp = 70
+
+if(weather == "Sunny" && temp == 70) {
+    console.log('The weather is '+ weather +' and ' + temp +' degrees. Beautiful weather today!')
+}
+
+
+//Problem 5
+console.log("Problem 5");
+//Use your imagination to declare and initialize a few variables and then demonstrate the logical OR operator in an IF statement
+var average = 70
+var finalGrade = 89
+
+if(average > 70 || finalGrade > 70){
+    console.log('Your average grade or final test grade was greater than 70, nice work!')
+}
+
+
+
+
+
+
+
+
+
+</script>
+</main>
+<footer>
+    &copy; 2023 Niall Kader
+</footer>
+</body>
+</html>
