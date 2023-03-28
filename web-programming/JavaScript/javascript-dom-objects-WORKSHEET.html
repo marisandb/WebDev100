@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>WORKSHEET - DOM Objects</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link REL=StyleSheet HREF="../styles/main.css" TYPE="text/css">
+        <script src="../js/main.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>JavaScript DOM Objects Worksheet</h1>
+            <h2>Questions</h2>
+            <h4>Question 1</h4>
+            <p class="question">
+                What is a node?
+            </p>
+            <div class="answer">
+                An object that represents an HTML element.
+            </div>
+            <h4>Question 2</h4>
+            <p class="question">
+                In order to use the document.getElementById() method to 'get a handle' on an element,
+                what attribute must that element have?
+            </p>
+            <div class="answer">
+                An id
+            </div>
+            <h4>Question 3</h4>
+            <p class="question">
+                When you invoke document.getElementById(), you must pass in a string parameter. What does the parameter represent? 
+            </p>
+            <div class="answer">
+                The id of the element you are trying to get. 
+            </div>
+            <h4>Question 4</h4>
+            <p class="question">
+                What does the document.getElementById() method return? 
+            </p>
+            <div class="answer">
+                It will return an object that represents the element you targeted with the matching id. 
+            </div>
+            <h4>Question 5</h4>
+            <p class="question">
+                What object is at the top of the DOM? In other words, what DOM object contains all other DOM objects?
+            </p>
+            <div class="answer">
+                The window.
+            </div>
+            <br><br>
+            <h1>Coding Problems</h1>
+            <p>
+            	You'll use the following elements to complete the coding problems:
+            </p>
+            <b>Problem 1</b>
+            <br>
+            <input type="text" id="txtFirstName" name="firstName" value="Bob">
+            <br><br>
+            <b>Problem 2</b>
+            <br>
+            <img id="dog-pic" src="../images/happy-dog.jpg" alt="If you don't see this image, then this worksheet may not be in the proper folder (the JavaScript folder)" />
+            <br><br>
+            <b>Problem 3</b>
+            <div id="myDiv">This is myDiv</div>
+            <br><br>
+            <b>Problem 4</b>
+            <form>
+            	<p><b>Complete this form, and the program will tell you if you are old enough to vote!</b></p>
+            	<label>Enter your age:</label>
+            	<input type="text" id="txtAge">
+            	<input type="button" id="btnCheckAge" value="Check Age">
+            </form>
+            
+            <script>
+            /////////////////////
+            // CODING PROBLEMS
+            /////////////////////
+
+            console.log("Problem 1");
+            //Get a handle on the textbox above (the INPUT element that has it's ID attribute set to "txtFirstName") and then log the 'value' property of the element/object.
+			//Then update the value property by setting it to your first name
+            var firstName = document.getElementById('txtFirstName')
+            console.log(firstName.value)
+
+            console.log("Problem 2");
+            // Get a handle on the the img element on this page that displays a picture of a dog.
+            // Then use dot notation to change the src and alt properties of the node.
+            // Change the src property to "../images/angry-dog.jpg"
+            // Change the alt property to "This dog is not so happy"
+            var image = document.getElementById('dog-pic')
+            image.setAttribute('src', '../images/angry-dog.jpg')
+            image.setAttribute('alt', 'This dog is not so happy')
+
+            console.log("Problem 3");
+            // Prompt the user to enter his/her name.
+            // There is a DIV element on this page that that has an id attribute of 'myDiv'.
+            // Get a handle on the DIV element and change its innerHTML property to display the user's name inside an H1 element.
+            var userName = prompt('Please enter your name')
+            var updateDiv =  document.getElementById('myDiv')
+            updateDiv.innerHTML = userName
+
+
+            console.log("Problem 4");
+            // In this problem you will gather user input from the FORM element above.
+
+            // Add JavaScript code that 'gets a handle' on the text input (its ID attribute is "txtAge")
+            // Then add JavaScript code to 'get a handle' on the button (its ID attribute is "btnCheckAge");
+
+            // Assign a function to the onclick property of the button.
+            // (There are some tips for how to do this on Blackboard for this assignment)
+            // Inside the body of the function, add code that does the following:
+            //    Extract the user input entered into the text box (hint: check the 'value' property of the text input object)
+            //    Write an IF statment that checks the age entered.
+            //        IF the age is greater than, or equal to 18 then alert "You can vote!"
+            //        IF the age is less than 18, then alert "Sorry, you cannot vote!"
+
+            var userInput = document.getElementById('txtAge')
+            var button = document.getElementById('btnCheckAge')
+
+            button.onclick = function (){
+                var age = userInput.value
+                if (age >= 18){
+                    alert('You can vote!')
+                }else{
+                    alert('Sorry, you cannot vote!')
+                }
+            }
+
+           </script>
+        </main>
+        <footer>
+            &copy; 2023 Niall Kader
+        </footer> 
+    </body>
+</html>
