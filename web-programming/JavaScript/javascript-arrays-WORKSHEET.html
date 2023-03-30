@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WORKSHEET - Arrays</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link REL=StyleSheet HREF="../styles/main.css" TYPE="text/css">
+</head>
+<body>
+    <main>
+        <h1>JavaScript Arrays Worksheet</h1>
+        <h4>Question 1</h4>
+        <p class="question">
+            What is the term for items that are stored in an array?
+        </p>
+        <div class="answer">
+            Elements
+        </div>
+        <h4>Question 2</h4>
+        <p class="question">
+            The position number of an item in an array is called what?
+        </p>
+        <div class="answer">
+            The index
+        </div>
+        <h4>Question 3</h4>
+        <p class="question">
+            What is the index of the first value in an array?
+        </p>
+        <div class="answer">
+            0
+        </div>
+        <h4>Question 4</h4>
+        <p class="question">
+            True or False - The length of an array is always one greater than it's highest index.
+        </p>
+        <div class="answer">
+            True
+        </div>
+
+
+        <h1>Coding Problems</h1>
+        <h3>Coding Problems - See the 'script' tag below this h3 tag. You will have to write some JavaScript code in it.</h3>
+        <p>You'll use the form below in one of the coding problems:</p>
+        
+        <div class="answer">
+	        <p>
+	        	<b>Average Test Score Calculator</b>
+	        	<br>
+	        	Enter three test scores in the form below (each score should be a number from 0-100).
+	        	Then press the button to see the average of the three scores.
+	        </p>
+	        <form>
+		        <label>Test 1:</label>
+		        <input type="text" id="txtScore1" size="3">
+		        <br>
+		        <label>Test 2:</label>
+		        <input type="text" id="txtScore2" size="3">
+		        <br>
+		        <label>Test 3:</label>
+		        <input type="text" id="txtScore3" size="3">
+		        <br><br>
+		        <input type="button" id="btnCalculateAverage" value="Calculate Average Score">
+	        	<div id="average-score">The average score will be displayed here</div>
+	        </form>
+        </div>
+        <br><br><br>
+        <script>
+        /////////////////////
+        // CODING PROBLEMS
+        /////////////////////
+
+        console.log("Problem 1");
+        // Create an array that holds the names of 4 of your friends
+        // Assign the array to a variable called 'friends'.
+        var friends = ['Ashley', 'Jessica', 'Savannah', 'Brittany']
+
+        // Log the value of the first element in the array
+        // Log the array
+        // Log the length of the array
+        console.log(friends[0])
+        console.log(friends)
+        console.log(friends.length)
+        // Use bracket notation to add an element to the end of the array, 
+        // the element's value should be 'Buster'
+        // Do not use an index number to do this, instead use the length property of the array
+        // (in class we should have talked about a way to add an element to an array by using the 'length' property of the array)
+        friends[friends.length] = 'Buster'
+
+        // Change the value of the first element to be "Fido"
+        friends[0] = 'Fido'
+
+        // Log the array (again)
+        console.log(friends)
+
+        console.log("Problem 2");
+        // Using a single statement, create an array of 'pizza' objects
+        // and assign it to a variable named 'pizzas'.
+        // Each object will have the following properties: size, crust, topping.
+        // Use the following chart to add data to each object
+        /*
+        SIZE      CRUST       TOPPING
+        -----------------------------
+        large     thick       sausage
+        small     thin        pepperoni
+        medium    thin        mushrooms
+        */
+        var pizzas = [
+            {size:'large', crust: 'thick', topping:'sausage'},
+            {size:'small', crust: 'thin', topping:'pepperoni'},
+            {size:'medium', crust: 'thin', topping:'mushrooms'}
+        ]
+
+        // Now retreive the large pizza from the array, and assign it to a variable named 'firstPizza'. 
+        // Then use dot notation to change the 'topping' property of firstPizza to a value of 'onions'.
+        firstPizza = pizzas[0]
+        firstPizza.topping = 'onions'
+
+        // SIDE NOTE: Here's another way that you could change a property of one of the pizza objects:
+        //
+        //      pizzas[0].topping = "onions";
+        //
+        // You wouldn't need to create the 'firstPizza' variable with this approach
+
+        // Finally, log the pizzas variable.
+        console.log(pizzas)
+
+
+        console.log("Problem 3");
+        // This problem is not about arrays, it's a review of working with the DOM!
+        // Your job is to finish the Average Test Score Calculator program.
+        // There is a FORM element above that allows users to enter 3 test scores.
+        // The  code written below will 'get a handle' on the button, and assign a function to its onclick property.
+        // This will cause the function to be executed (called) when the button is clicked (we'll talk more about this soon!).
+        // Add code inside the body of the function that does the following:
+        // 		1. Get a handle on the 3 INPUT elements that allow a user to enter test scores
+        //		2. Get a handle on the DIV element that should display the average of the test scores
+        //		3. Extract the values entered for each test score (store the values in variables)
+        //		4. Calculate the average of the three scores (and store the result in a variable)
+        //		5. Display the average in the DIV element
+        // WARNING - Remember that all user input defaults to a string, so you may have to use parseInt() or parseFloat()
+
+        var btn = document.getElementById("btnCalculateAverage");
+        btn.onclick = function(){
+        	num1 = parseInt(document.getElementById('txtScore1').value)
+            num2 = parseInt(document.getElementById('txtScore2').value)
+            num3 = parseInt(document.getElementById('txtScore3').value)
+            average = (num1 + num2 + num3)/3
+            var averageBox = document.getElementById('average-score')
+            averageBox.innerHTML = average
+        };
+       
+        
+        </script>
+    </main>
+    <footer>
+         &copy; 2023 Niall Kader
+    </footer>
+</body>
+</html>
