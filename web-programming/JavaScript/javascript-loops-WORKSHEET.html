@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WORKSHEET - Loops</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link REL=StyleSheet HREF="../styles/main.css" TYPE="text/css">
+</head>
+<body>
+    <main>
+	    <h1>JavaScript Loops Worksheet</h1>
+	    <h2>Questions</h2>
+	    <h4>Question 1</h4>
+	    <p class="question">
+	        What is the difference between a while loop and a for loop?
+	    </p>
+	    <div class="answer">
+	        A while loop will iterate so long as the boolean expression is true. A for loop repeats a code block only a certain number of times.
+	    </div>
+	    <h4>Question 2</h4>
+	    <p class="question">
+	        What is an <b>iteration</b>?
+	    </p>
+	    <div class="answer">
+	        Each time the code block executes is called an iteration. 
+	    </div>
+	    <h4>Question 3</h4>
+	    <p class="question">
+	        What is the meaning of the <b>current element</b> in a loop?
+	    </p>
+	    <div class="answer">
+	        It is the element that is being processed within the body of loop - this changes with each iteration. 
+	    </div>
+	    <h4>Question 4</h4>
+	    <p class="question">
+	        What is a 'counter variable'?
+	    </p>
+	    <div class="answer">
+	        A variable initialized to a number in the first part of a loop. 
+	    </div>
+	        <h4>Question 5</h4>
+	    <p class="question">
+	        What does the <b>break;</b> statement do when used inside a loop?
+	    </p>
+	    <div class="answer">
+	        Allows you to terminate the loop early. 
+	    </div>
+
+		  <h1>Coding Problems</h1>
+	    <h3>Coding Problems - See the 'script' tag below this h3 tag. You will have to write some JavaScript code in it.</h3>
+	    <p>
+	        <b>Always test your work! Check the console log to make sure there are no errors.</b>
+	    </p>
+	    <script>
+	    /////////////////////
+	    // CODING PROBLEMS
+	    /////////////////////
+
+	    console.log("Problem 1");
+    	/*
+    	Problem 1 - A for loop that iterates from 1 to 5
+
+    	Write a FOR loop that iterates from 1 to 5.
+    	Use 'x' as the name of the counter variable.
+    	Inside the body of the loop, simply log x.
+    	(the console should log 1,2,3,4, and 5 when you run this code).
+    	*/
+    	for (x=1; x<6; x++){
+    		console.log(x)
+    	}
+
+    	console.log("Problem 2");
+    	/*
+    	Problem 2 - Loop until the user enters the correct password
+
+    	1. Declare a variable named secretPassword and initialize it to a value of 'abc'.
+    	2. Declare another variable named passwordEntered and leave it uninitialized.
+    	3. Then create a WHILE loop that continues to iterate as long as secretPassword is NOT equal to passwordEntered.
+    	4. Inside the body of the loop, use the prompt() function to ask the user to 'Enter the password' and assign the return value to passwordEntered. 
+    	5. After the loop (after the closing the curly brace that closes the body of the loop), alert this message: "You entered the correct password!"
+    	*/
+    	var secretPassword = 'abc'
+    	var passwordEntered
+
+    	while(secretPassword != passwordEntered){
+    		passwordEntered = prompt('Enter the password')
+    	}
+
+    	alert('You entered the correct password!')
+
+   	
+
+    	console.log("Problem 3");
+    	/*
+    	Problem 3 - A for loop that calculates the sum of an array of numbers
+    	
+    	Declare a variable named 'total' and initialize it to 0 (zero);
+    	Then write a for loop that iterates through the 'numbers' array below.
+    	Inside the body of the loop, add the value of each element to 'total'.
+    	By the time the loop is done you should have the sum stored in 'total'.
+    	After the loop, log the 'total' variable.
+    	*/
+    	var numbers = [2,4,2,6,5,8,2];
+    	
+    	total = 0
+
+    	for(x=0; x<numbers.length; x++){
+    		total += numbers[x]
+    	}
+
+		console.log(total)
+
+    	console.log("Problem 4")
+    	/*
+		Problem 4 - A loop that counts the occurences of a particular value.
+		
+		Declare a variable named numberOfTwos and initialize it to 0 (zero).
+		Then you'll use a loop to count how many 2s are in the array from the previous problem.
+		In the body of the loop check to see if the current element is equal to 2.
+		If so, then increment the numberOfTwos variable.
+		After the loop, console log the numberOfTwos variable
+    	*/
+    	var numberOfTwos = 0 
+
+    	for(x=0; x<numbers.length; x++){
+    		if(numbers[x] == 2){
+    			numberOfTwos++
+    		}
+    	}
+
+    	console.log(numberOfTwos)
+
+    	console.log("Problem 5");
+    	/*
+    	Problem 5 (this is a tough one!)
+    	You will use the array of 'employee' objects below to complete this problem.
+    	
+		Write a program that asks the user to search for employees in the array.
+		Start by using the prompt() function to prompt the user to 'Enter the last name of the employee you would like to search for'.
+		Then loop through the employees array.
+		Inside the body of the loop, check to see if the last name of the 'current' employee is equal to the user input entered into the prompt.
+		If the program finds an employee that matches the last name entered into the prompt, it should display all the properties of the matching employee in an alert box (you'll have to use string concatenation to do this).
+		If the program does not find a matching employee, it should display an alert that says, "the employee you searched for is not in the system".
+		*/
+
+    	var employees = [
+    	  { id:101, firstName: "Joe", lastName: "Anderson" },
+    	  { id:102, firstName: "Jenny", lastName: "Beacham" },
+    	  { id:103, firstName: "Sally", lastName: "Crockford" },
+    	  { id:104, firstName: "Chester", lastName: "Denning" },
+    	  { id:105, firstName: "Winnie", lastName: "Frank" },
+    	  { id:106, firstName: "Patty", lastName: "Mumford" },
+    	  { id:107, firstName: "Lorraine", lastName: "Oliver" },
+    	  { id:108, firstName: "Judd", lastName: "Jones" },
+    	  { id:109, firstName: "Billy", lastName: "Smith" },
+    	  { id:110, firstName: "Mark", lastName: "Portman" }
+    	];
+
+    	employeeLast = prompt('Enter the last name of the employee you would like to search for')
+    		
+    	for(x=0; x < employees.length; x++){
+    		emp = employees[x]
+  
+    		if (emp.lastName == employeeLast){
+    			alert('Id: '+ emp.id + ' First Name: ' + emp.firstName + ' Last Name: ' + emp.lastName)
+    			break;
+    		}else{
+    			alert('The employee you searched for is not in the system')
+    			break;
+    		}
+    	}
+
+
+    	</script>
+    </main>
+    <footer>
+         &copy; 2023 Niall Kader
+    </footer>
+</body>
+</html>
+
+    
